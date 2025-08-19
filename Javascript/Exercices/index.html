@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="trigger_bonjour">
+        Hello World
+    </div>
+
+    <button id="trigger_bonjour">Bonjour</button>
+    <script>
+        var nombre = 88;
+        if(nombre == 69) {
+            console.log('ou là');
+        } else {
+            console.log('ici');
+        }
+
+    </script>
+    <script>
+        // Évènement qui va déclencher l'appel de ma fonction
+        document.getElementById('trigger_bonjour').addEventListener('click', function() {
+            askName();
+        });
+        
+        
+        
+        // Définition de ma fonction
+        function askName() {
+            var name = prompt('Saissez votre nom');
+            console.log(name);
+        }
+    </script>
+
+
+</body>
+</html>
