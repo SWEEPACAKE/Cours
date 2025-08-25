@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery exo 2</title>
+    <style>
+        #rouge {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="monBouton">
+        Mon Bouton magnifique
+    </button>
+    <div id="rouge">
+        BAHAHAHA LA VILAINE DIV
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        /* Complétez le code jQuery pour que lorsque l'on clique sur le bouton, 
+        la div rouge disparaisse */
+        $("#monBouton").click(function() {
+            $("#rouge").hide();
+        });
+    </script>
+
+</body>
+</html>

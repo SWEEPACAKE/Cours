@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery exo 6</title>
+</head>
+<body>
+    <select name="monSelect" id="monSelect">
+        <option value=""></option>
+        <option value="1">Test 1</option>
+        <option value="2">Test 2</option>
+        <option value="3">Test 3</option>
+        <option value="4">Test 4</option>
+    </select>
+    <div id="maDiv">
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        /* Complétez le code jQuery pour écrire la valeur  de mon select
+        dans la div lorsque je choisis une option */
+
+        $("#monSelect").change(function() {
+            $("#maDiv").html($("#monSelect").val());
+        });
+    </script>
+
+</body>
+</html>

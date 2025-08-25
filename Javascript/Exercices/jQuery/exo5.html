@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery exo 5</title>
+</head>
+<body>
+    <input type="text" id="monTexte" name="monTexte"/>
+    <div id="maDiv">
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        /* Complétez le code jQuery pour écrire le contenu
+        de mon input dans la div lorsque je quitte le champ */
+        $("#monTexte").blur(function() {
+            $("#maDiv").html($('#monTexte').val());
+        });
+    </script>
+
+</body>
+</html>
