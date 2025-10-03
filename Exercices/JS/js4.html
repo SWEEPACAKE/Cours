@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice jQuery : Liste dynamique</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #ma-liste {
+            margin-top: 15px;
+        }
+        #ma-liste li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice jQuery : Ajouter des éléments à une liste</h1>
+    <input type="text" id="nouvel-elem" placeholder="Nouvel élément">
+    <button id="ajouter-btn">Ajouter</button>
+    <ul id="ma-liste"></ul>
+
+    <script>
+        $(document).ready(function() {
+            $('#ajouter-btn').click(function() {
+                var texte = $('#nouvel-elem').val().trim();
+                if (texte !== '') {
+                    $('#ma-liste').append('<li>' + $('<div>').text(texte).html() + '</li>');
+                    $('#nouvel-elem').val('');
+                }
+            });
+            $('#nouvel-elem').keypress(function(e) {
+                if (e.which === 13) {
+                    $('#ajouter-btn').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

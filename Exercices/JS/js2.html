@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice jQuery : Changement de couleur</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #carre {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice jQuery : Changer la couleur d'un carré</h1>
+    <p>Cliquez sur un bouton pour changer la couleur du carré ci-dessous.</p>
+    <div id="carre"></div>
+    <button class="btn-couleur" data-couleur="#e74c3c">Rouge</button>
+    <button class="btn-couleur" data-couleur="#2ecc71">Vert</button>
+    <button class="btn-couleur" data-couleur="#f1c40f">Jaune</button>
+
+    <script>
+        $(document).ready(function() {
+            $('.btn-couleur').click(function() {
+                var couleur = $(this).data('couleur');
+                $('#carre').css('background-color', couleur);
+            });
+        });
+    </script>
+</body>
+</html>

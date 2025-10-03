@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Exercice jQuery : Calculatrice simple</h1>
+    <p>Entrez deux nombres et cliquez sur "Additionner" pour voir le résultat.</p>
+    <input type="number" id="nombre1" placeholder="Nombre 1">
+    <input type="number" id="nombre2" placeholder="Nombre 2">
+    <button id="additionner">Additionner</button>
+    <div id="resultat"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#additionner').click(function() {
+                var n1 = parseFloat($('#nombre1').val());
+                var n2 = parseFloat($('#nombre2').val());
+                if (isNaN(n1) || isNaN(n2)) {
+                    $('#resultat').text('Veuillez entrer deux nombres valides.');
+                } else {
+                    $('#resultat').text('Résultat : ' + (n1 + n2));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

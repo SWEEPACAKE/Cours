@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice jQuery : Afficher/Masquer un texte</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #texte-secret {
+            display: none;
+            margin-top: 15px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice jQuery : Afficher ou masquer un texte</h1>
+    <button id="toggle-btn">Afficher le texte secret</button>
+    <div id="texte-secret">Bravo ! Tu as trouvé le texte secret 🎉</div>
+
+    <script>
+        $(document).ready(function() {
+            $('#toggle-btn').click(function() {
+                $('#texte-secret').slideToggle();
+                if ($('#texte-secret').is(':visible')) {
+                    $(this).text('Masquer le texte secret');
+                } else {
+                    $(this).text('Afficher le texte secret');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
