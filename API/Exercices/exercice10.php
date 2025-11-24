@@ -3,8 +3,8 @@
 // - soit la liste de tous les livres
 // - soit, si un id_auteur est précisé, seulement les livres de cet auteur
 
-// $url = "http://bibliotheque.loc/getLivres.php";
-$url = "http://bibliotheque.loc/getLivres.php?id_auteur=4";
+$url = "http://bibliotheque.loc/getLivres.php";
+// $url = "http://bibliotheque.loc/getLivres.php?id_auteur=4";
 
 $curl = curl_init($url);
 
